@@ -1,16 +1,17 @@
 import React from "react";
 
 import Card from "@material-ui/core/Card";
+import { CardContainer } from "../style/brello_card_style";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
-const BrelloCard = () => {
+const BrelloCard = ({ text }) => {
   return (
-    <Card variant="outlined">
+    <CardContainer variant="outlined">
       <CardContent>
-        <Typography gutterBottom>Word of the Day</Typography>
+        <Typography gutterBottom>{text}</Typography>
       </CardContent>
-    </Card>
+    </CardContainer>
   );
 };
 
