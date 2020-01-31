@@ -1,13 +1,23 @@
 import React from "react";
 import BrelloList from "./brello_list";
+import { connect } from "react-redux";
 
-const App = () => {
+const App = props => {
+  const { lists } = props;
   return (
     <div className="app">
       <h2>Hallo world</h2>
-      <BrelloList title={"To Do"}></BrelloList>
+      {lists.map(list => {
+        return <BrelloList title={list.title} cards={list.cards} />;
+      })}
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = state => ({
+  //List initiated for this components
+  //and state.list come from reducer
+  lists: state.lists
+});
+
+export default connect(mapStateToProps)(App);
