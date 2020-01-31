@@ -1,6 +1,7 @@
 import React from "react";
 import { ListContainer } from "../style/brello_list_style";
 import BrelloCard from "./brello_card";
+import BrelloActionButton from "./brello_action_button";
 
 const BrelloList = ({ title, cards }) => {
   return (
@@ -9,6 +10,7 @@ const BrelloList = ({ title, cards }) => {
       {cards.map(card => {
         return <BrelloCard text={card.text} />;
       })}
+      <BrelloActionButton />
     </ListContainer>
   );
 };
