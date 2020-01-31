@@ -8,7 +8,7 @@ const BrelloList = ({ title, cards }) => {
     <ListContainer>
       <h3>{title}</h3>
       {cards.map(card => {
-        return <BrelloCard text={card.text} />;
+        return <BrelloCard key={card.id} text={card.text} />;
       })}
       <BrelloActionButton />
     </ListContainer>

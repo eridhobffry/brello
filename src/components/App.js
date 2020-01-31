@@ -10,7 +10,9 @@ const App = props => {
       <h2>Hallo world</h2>
       <ListContainer>
         {lists.map(list => {
-          return <BrelloList title={list.title} cards={list.cards} />;
+          return (
+            <BrelloList key={list.id} title={list.title} cards={list.cards} />
+          );
         })}
       </ListContainer>
     </div>
