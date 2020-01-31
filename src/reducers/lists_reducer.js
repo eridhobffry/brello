@@ -12,6 +12,20 @@ const initialState = [
         text: "We used mix the materia UI style and styled components"
       }
     ]
+  },
+  {
+    title: "This Episode",
+    id: 1,
+    cards: [
+      {
+        id: 0,
+        text: "We will create our list but still static"
+      },
+      {
+        id: 1,
+        text: "And render many cards"
+      }
+    ]
   }
 ];
 
