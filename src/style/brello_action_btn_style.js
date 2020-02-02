@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import TextareaAutoSize from "react-textarea-autosize";
 
 export const OpenFormButton = styled.div`
   display: flex;
@@ -13,4 +14,8 @@ export const OpenFormButton = styled.div`
   opacity: ${props => (props.list ? 1 : 0.5)};
   color: ${props => (props.list ? "white" : "inherit")};
   background-color: ${props => (props.list ? "rgba(0,0,0,.15)" : "inherit")};
+`;
+
+export const TextAreaAutoSize = styled(TextareaAutoSize)`
+  resize: none;
 `;
