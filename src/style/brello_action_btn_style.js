@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TextareaAutoSize from "react-textarea-autosize";
+import { CardContainer } from "./brello_card_style";
 
 export const OpenFormButton = styled.div`
   display: flex;
@@ -18,4 +19,14 @@ export const OpenFormButton = styled.div`
 
 export const TextAreaAutoSize = styled(TextareaAutoSize)`
   resize: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  overflow: hidden;
+`;
+
+export const CardContainerInput = styled(CardContainer)`
+  min-height: 85px;
+  min-width: 272px;
+  padding: 6px 8px 2px;
 `;

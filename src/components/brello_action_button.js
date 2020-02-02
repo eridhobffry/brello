@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
-import { OpenFormButton } from "../style/brello_action_btn_style";
-import TextareaAutosize from "react-textarea-autosize";
+import {
+  OpenFormButton,
+  CardContainerInput
+} from "../style/brello_action_btn_style";
 import { TextAreaAutoSize } from "../style/brello_action_btn_style";
-import { CardContainer } from "../style/brello_card_style";
 
 const BrelloActionButton = props => {
   const [formOpen, setFormOpen] = useState(false);
@@ -27,7 +28,7 @@ const BrelloActionButton = props => {
       ? "Enter list title"
       : "Enter a title for this card";
     return (
-      <CardContainer>
+      <CardContainerInput>
         <TextAreaAutoSize
           placeholder={placeholder}
           autoFocus
@@ -35,7 +36,7 @@ const BrelloActionButton = props => {
           value={text}
           onChange={e => setText(e.target.value)}
         />
-      </CardContainer>
+      </CardContainerInput>
     );
   };
 
